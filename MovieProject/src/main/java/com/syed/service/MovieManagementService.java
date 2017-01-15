@@ -71,6 +71,21 @@ public class MovieManagementService {
 	}
 	
 	
+	public void deleteMovie(int id)
+	{
+		
+		try
+		{
+			movieManagementDao.deleteMovie(id);
+		}
+		catch(DataAccessException dae)
+		{
+			logger.error("No Movie Found", dae);
+			throw new MovieFetchException("No Movie Found", dae);
+		}
+		
+	}
+	
 	/*
 	private Movie populateMovie(int id)
 	{

@@ -27,6 +27,15 @@ public class MovieManagementDaoImpl implements MovieManagementDao {
 		
 	}
 	
+	@Override
+	public void deleteMovie(int id) {
+		String deleteMovieQuery="DELETE FROM MOVIES WHERE ID=?";
+		int movieId=id;
+		jdbcTemplate.update(deleteMovieQuery, new Object[]{movieId});
+	}
+	
+	
+	
 	private Movie populateMovieWithId(Movie movie, int movieId)
 	{
 		Movie createdMovie=new Movie();

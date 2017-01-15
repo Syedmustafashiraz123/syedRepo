@@ -14,5 +14,7 @@ public interface MovieManagementDao {
 	public abstract Movie getMovieById(int id);
 
 	public abstract List<Movie> listMovies();
+	
+	public abstract void deleteMovie(int id);
 
 }

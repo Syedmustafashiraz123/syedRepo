@@ -50,17 +50,11 @@ public class MyController {
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE, consumes=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public void deleteMovie(@PathVariable int id) {
 		
-		logger.info("Delete movie with id : " +movie);
-		Movie movieInsert=movieService.createMovie(movie);
-		logger.info("movie inserted successfully: " +movieInsert);
-		return new ResponseEntity<Movie>(movieInsert, HttpStatus.CREATED);
+		logger.info("Delete movie with id : " +id);
+		 movieService.deleteMovie(id);
 			}
 	
-	  @RequestMapping("/delete/{contactId}")
-			public String deleteContact(@PathVariable("contactId") Integer contactId) {
-			    contactService.removeContact(contactId);
-			    return "redirect:/mvc/index";
-			}
+	  
 	
 	
 	
