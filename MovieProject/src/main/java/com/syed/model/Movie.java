@@ -12,6 +12,19 @@ public class Movie  implements Serializable{
 	private String leadactor;
 	private String language;
 	
+	public Movie(int id, String moviename,String leadactor, String language )
+	{
+		this.id=id;
+		this.moviename=moviename;
+		this.leadactor=leadactor;
+		this.language=language;
+	}
+	
+	public Movie()
+	{
+		
+	}
+	
 	
 	public int getId() {
 		return id;

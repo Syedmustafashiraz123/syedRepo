@@ -39,8 +39,7 @@ public class MovieManagementService {
 	}
 	
 	public Movie getMovieById(int id)
-	{
-		//return populateUser(id);
+	{		
 		
 		Movie movie=new Movie();
 		try
@@ -86,16 +85,5 @@ public class MovieManagementService {
 		
 	}
 	
-	/*
-	private Movie populateMovie(int id)
-	{
-		Movie user=new Movie();
-		user.setFirstname("John");
-		user.setLastname("Kim");
-		user.setCity("Mumbai");
-		user.setId(id);
-		
-		return user;
-		
-	} */
+	
 }

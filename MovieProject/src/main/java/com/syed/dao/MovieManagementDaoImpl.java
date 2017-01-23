@@ -51,9 +51,7 @@ public class MovieManagementDaoImpl implements MovieManagementDao {
 		return id+1;
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.ing.training.dao.UserManagementDao#getUserById(java.lang.String)
-	 */
+	
 	@Override
 	public Movie getMovieById(int id)
 	{
@@ -73,9 +71,7 @@ public class MovieManagementDaoImpl implements MovieManagementDao {
 		
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.ing.training.dao.UserManagementDao#listUsers()
-	 */
+	
 	@Override
 	public List<Movie> listMovies()
 	{

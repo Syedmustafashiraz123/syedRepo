@@ -31,8 +31,8 @@ public class MyController {
 	MovieManagementService movieService;
 	
 	/** This method creates a new movie 
-	 * @param user
-	 * @return User and HttpStatus
+	 * @param movie
+	 * @return Movie and HttpStatus
 	 */
 	@RequestMapping(value = "/create", method = RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<Movie> addMovie(@RequestBody Movie movie) {
@@ -63,7 +63,7 @@ public class MyController {
 	
 	/** Get movie details by Id
 	 * @param id
-	 * @return User Details
+	 * @return Movie Details
 	 */
 	@RequestMapping(value = "/get/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	@ResponseBody
@@ -74,13 +74,13 @@ public class MyController {
 	}
 	
 	/** Get 
-	 * @param id
-	 * @return User Details
+	 * @param 
+	 * @return All Movie Details
 	 */	
 	@RequestMapping(value = "/list", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	@ResponseBody
 	public List<Movie> listMovies() {
-	//	return new ArrayList<User>();
+	
 		return movieService.listMovies();
 		
 	}

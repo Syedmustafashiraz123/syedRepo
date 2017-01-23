@@ -6,9 +6,7 @@ import com.syed.model.Movie;
 
 public interface MovieManagementDao {
 
-	/* (non-Javadoc)
-	 * @see com.ing.training.dao.UserManagementDao#createUser(com.ing.training.domain.User)
-	 */
+	
 	public abstract Movie createMovie(Movie movie);
 
 	public abstract Movie getMovieById(int id);
